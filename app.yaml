@@ -1,0 +1,45 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+# - url: /favicon\.ico
+#   static_files: favicon.ico
+#   upload: favicon\.ico
+- url: /vendor
+  static_dir: vendor
+- url: /css
+  static_dir: css
+- url: /img
+  static_dir: img
+- url: /js
+  static_dir: js
+- url: /spartanhome.jpg
+  static_files: spartanhome.jpg
+  upload: spartanhome\.ico
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
+
+
+# runtime: python27
+# api_version: 1
+# threadsafe: true
+#
+# inbound_services:
+# - channel_presence
+#
+# handlers:
+# - url: /.*
+#   script: main.app
+#
+# libraries:
+# - name: webapp2
+#   version: "2.5.2"
+# - name: jinja2
+#   version: "2.6"
